@@ -1,12 +1,12 @@
 // page.js
 
 import React from 'react'
-import CrptoList from '../Components/CryptoList';
+import CryptoList from '@/components/CryptoList';
 const page = () => {
     return (
         <div>
           <>
-            <CrptoList />
+            <CryptoList />
           </>  
         </div>
     )

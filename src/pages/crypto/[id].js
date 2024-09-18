@@ -12,6 +12,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from '@/components/Navbar';
 
 
+
+
 const CryptoDetails = () => {
     const router = useRouter();
     const { id } = router.query;
