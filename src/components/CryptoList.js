@@ -80,13 +80,17 @@ const CryptoTracker = () => {
                                         style={{ width: '30px', height: '30px' }}
                                     />
 
-                                    <Link href={`/crypto/${crypto.id}`}
-                                        style={{
-                                            textDecoration: 'none',
-                                            color: 'inherit'
-                                        }}>
-                                        {crypto.name}
-                                    </Link>
+                                <Link 
+                                    href={{
+                                        pathname: `/crypto/${crypto.id}`,
+                                        query: { inrToGbpRate: inrToGbpRate }  // Pass the conversion rate
+                                    }}
+                                    style={{
+                                        textDecoration: 'none',
+                                        color: 'inherit'
+                                    }}>
+                                    {crypto.name}
+                                </Link>
                                 </td>
                                 <td style={{fontSize:'0.7rem'}}>{crypto.symbol.toUpperCase()}</td>
                                 <td style={{fontSize:'0.7rem'}}>{(crypto.current_price * inrToGbpRate).toFixed(2)}</td> {/* Convert Price to GBP */}
