@@ -9,7 +9,8 @@ import {
     useRouter
 } from 'next/router';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from '@/Components/Navbar';
+import Navbar from '@/components/Navbar';
+
 
 const CryptoDetails = () => {
     const router = useRouter();
