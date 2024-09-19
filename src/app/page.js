@@ -1,7 +1,7 @@
 // page.js
 
 import React from 'react'
-import CryptoList from '@/components/CryptoList';
+import CryptoList from '@/components/cryptoList';
 const page = () => {
     return (
         <div>

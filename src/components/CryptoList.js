@@ -49,8 +49,13 @@ const CryptoTracker = () => {
         <>
             <Navbar />
             <div className="container">
-                <h1 className="my-4 text-success">Listings</h1>
-                <input
+                {/*<h1 className="my-4 text-success">Listings</h1>*/}
+
+                <div className='link-to-stock-manager' >
+                <Link href='https://demo-stock-manager.vercel.app/' replace>Stock Portfolio Manager App</Link>
+                </div>
+            
+                <input 
                     type="text"
                     placeholder="Search crypto name"
                     className="form-control mb-4"
