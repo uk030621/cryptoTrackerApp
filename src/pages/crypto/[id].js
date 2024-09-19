@@ -53,7 +53,7 @@ const CryptoDetails = () => {
             <Navbar />
             <div className="container mt-5 d-flex justify-content-center">
                 
-                <div style={{backgroundColor:'pink'}} className="card">
+                <div style={{backgroundColor:'lightgrey', borderRadius:'20px'}} className="card">
                 <Link style={{textAlign:'center'}} href='/'>Home</Link>
                     <img src={cryptoData.image.small}
                         className="card-img-top img-fluid" alt={`${cryptoData.name} logo`}
@@ -80,7 +80,7 @@ const CryptoDetails = () => {
                         </p>
 
                         <p className="card-text">
-                            <b>% Market Cap Change - <span style={{fontStyle:'italic', fontSize:'0.8rem', fontWeight:'lighter'}}>The percentage change in the total market capitalization of the cryptocurrency over the past 24 hours. {cryptoData.symbol.toUpperCase()} market cap has moved by <span style={{fontSize:'1rem', color:'blue'}}>{cryptoData.market_data.market_cap_change_percentage_24h.toFixed(2)}%</span> in the last day.
+                            <b>Market Cap Change - <span style={{fontStyle:'italic', fontSize:'0.8rem', fontWeight:'lighter'}}>The percentage change in the total market capitalization of the cryptocurrency over the past 24 hours. {cryptoData.symbol.toUpperCase()} market cap has moved by <span style={{fontSize:'1rem', color:'blue'}}>{cryptoData.market_data.market_cap_change_percentage_24h.toFixed(2)}%</span> in the last day.
                             </span></b> 
                         </p>
                         <p className="card-text">
