@@ -1,4 +1,4 @@
-// Components/CryptoList.js
+// Components/cryptoList.js
 
 'use client';
 import React, { useState, useEffect } from 'react';
