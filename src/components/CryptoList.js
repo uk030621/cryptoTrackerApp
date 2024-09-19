@@ -45,6 +45,11 @@ const CryptoTracker = () => {
         return crypto.name.toLowerCase().includes(searchQuery.toLowerCase());
     });
 
+    // Helper function to format large numbers with commas
+    const formatNumber = (num) => {
+        return num.toLocaleString();
+    };
+
     return (
         <>
             <Navbar />
@@ -68,10 +73,10 @@ const CryptoTracker = () => {
                             <th className="bs-primary">Name</th>
                             <th className="bs-primary">Symbol</th>
                             <th className="bs-primary">Price (£)</th> {/* Changed to GBP */}
-                            <th className="bs-primary">Market Cap (M £)</th> {/* Changed to Million GBP */}
-                            <th className="bs-primary">1h change</th>
-                            <th className="bs-primary">24h change</th>
-                            <th className="bs-primary">7D Change</th>
+                            <th className="bs-primary">Market Cap (£)</th> {/* Changed to Million GBP */}
+                            <th className="bs-primary">1h %</th>
+                            <th className="bs-primary">24h %</th>
+                            <th className="bs-primary">7D %</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -98,8 +103,8 @@ const CryptoTracker = () => {
                                 </Link>
                                 </td>
                                 <td style={{fontSize:'0.7rem'}}>{crypto.symbol.toUpperCase()}</td>
-                                <td style={{fontSize:'0.7rem'}}>{(crypto.current_price * inrToGbpRate).toFixed(2)}</td> {/* Convert Price to GBP */}
-                                <td style={{fontSize:'0.7rem'}}>{(crypto.market_cap * inrToGbpRate / 1_000_000).toFixed(0)}</td> {/* Convert Market Cap to Million GBP */}
+                                <td style={{fontSize:'0.7rem'}}>{(crypto.current_price * inrToGbpRate).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td> {/* Convert Price to GBP */}
+                                <td style={{fontSize:'0.7rem'}}>{(crypto.market_cap * inrToGbpRate).toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}</td> {/* Convert Market Cap to Million GBP */}
                                 <td style={{
                                     color: crypto.price_change_percentage_1h_in_currency < 0 ? 'red' : 'green',
                                     fontSize:'0.7rem'
