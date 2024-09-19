@@ -50,8 +50,8 @@ const CryptoDetails = () => {
 
     return (
         <>
-            <Navbar />
-            <div className="container mt-5 d-flex justify-content-center">
+            <Navbar/>
+            <div className="container mt-3 d-flex justify-content-center">
                 
                 <div style={{backgroundColor:'lightgrey', borderRadius:'20px'}} className="card">
                 <Link style={{textAlign:'center'}} href='/'>Home</Link>
