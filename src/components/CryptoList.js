@@ -57,7 +57,7 @@ const CryptoTracker = () => {
                 {/*<h1 className="my-4 text-success">Listings</h1>*/}
 
                 <div className='link-to-stock-manager' >
-                <Link href='https://demo-stock-manager.vercel.app/' replace>Stock Portfolio Manager App</Link>
+                <Link href='https://demo-stock-manager.vercel.app/ukstock' replace>Stock Portfolio Manager App</Link>
                 </div>
             
                 <input 
